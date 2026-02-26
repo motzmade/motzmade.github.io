@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <div class="links">
+            <a href="index.html"><h1>MotzMade</h1></a>
+            <a href="work.html">
+                <h2>Work</h2>
+            </a>
+            <a href="about.html">
+                <h2>About</h2>
+            </a>
+            <a href="contact.html">
+                <h2>Contact</h2>
+            </a>
+        </div>
+        <div class="secondary">
+            <a href="index.html"><img src="logo.png" class="logo"></a>
+            <div class="text-container">
+                <h3>Micah Spencer</h3>
+                <h4>Making Motz Made</h4>
+            </div>
+        </div>
+    </nav>
+    <img src="test-banner.jpg" class="banner">
+    <br>
+    <section class="carousel-section">
+        <div class="carousel">
+            <figure>
+                <a href="album.html"><img src="slideshow1.jpg"></a>
+            </figure>
+            <figure>
+                <a href="comic.html"><img src="slideshow-2.jpg"></a>
+            </figure>
+            <figure>
+                <a href="griptape.html"><img src="slideshow-3.jpg"></a>
+            </figure>
+            <figure>
+                <a href="horse.html"><img src="slideshow-4.jpg"></a>
+            </figure>
+            <figure>
+                <a href="orwell.html"><img src="slideshow-5.jpg"></a>
+            </figure>
+            <figure>
+                <a href="fashion.html"><img src="slideshow-6.jpg"></a>
+            </figure>
+            <figure>
+                <a href="magazine.html"><img src="slideshow-7.jpg"></a>
+            </figure>
+            <figure>
+                <a href="thirdworlds.html"><img src="slideshow-8.jpg"></a>
+            </figure>
+        </div>
+    </section>
+    <script>
+        window.onload = function () {
+            const slideInElement = document.querySelector('.secondary');
+            slideInElement.classList.add('active');
+        };
+    </script>
+</body>
+
+</html>

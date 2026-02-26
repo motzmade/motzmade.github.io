@@ -1,0 +1,244 @@
+/*
+turquoise: #2dbaa4
+dark turq: #005029
+
+*/
+@font-face {
+  font-family: "enchanted_land";
+  src: url(Enchanted\ Land\ DS\ D.otf);
+}
+
+@font-face {
+  font-family: "KLGabe";
+  src: url(KLGabe.ttf);
+}
+
+@font-face {
+  font-family: "TT_Lakes_Neue";
+  src: url(TT_Lakes_Neue_Trial_Regular.ttf);
+}
+
+@font-face {
+  font-family: "TT_Lakes_Neue_bold";
+  src: url(TT_Lakes_Neue_Trial_Expanded_Bold.ttf);
+}
+
+body {
+    background-color: #2dbaa4;
+}
+
+nav {
+    width: 100%;
+    height: 150px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #2dbaa4;
+    color: black;
+    border-bottom: solid black 2px;
+}
+
+h1 {
+    padding-left: 5%;
+    padding-right: 40%;
+    text-align: left;
+    color: black;
+    font-family: "KLGabe";
+    font-size: 250%;
+}
+
+h2 {
+    text-align: right;
+    color: white;
+    font-family: "enchanted_land";
+    font-kerning: 10px;
+    font-size: 200%;
+}
+
+.links {
+    padding-top: 1.5%;
+    padding-right: 10%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.logo {
+    max-width: 100%;
+    height: auto;
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+    z-index: 100;
+}
+
+.secondary {
+    width: 25%;
+    height: 200px;
+    display: flex;
+    margin-left: 5%;
+    margin-top: 5%;
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: transform 1s ease, opacity 1s ease;
+    align-items: center;
+}
+
+.secondary.active {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.text-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 50%;
+    height: auto;
+}
+
+.banner {
+    width: 100%;
+    height: auto;
+    padding-top: 25%;
+    margin: 0;
+    position: absolute;
+    left: 0;
+}
+
+:root {
+  --slide-count: 8; /*no of slides (change to add more img)*/
+  --slide-width: 400px; 
+  --carousel-edge-pos:
+      calc( 0% - ((var(--slide-width) * var(--slide-count)) - 100%) ); /* formula to calulate the offset value */
+}
+
+.carousel-section {
+  overflow: hidden;
+  margin-top: 50%;
+}
+
+.carousel {
+  display: flex;
+  align-items: stretch;
+  gap: 3px;
+  -webkit-overflow-scrolling: touch;
+  animation: scroll 20s linear normal infinite;
+  animation-play-state: running;
+}
+
+.carousel:hover {
+  animation-play-state: paused;
+}
+
+.carousel img {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  width: var(--slide-width);
+  height: 100%;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(var(--carousel-edge-pos));
+  }
+}
+
+/*end of index; everything from here on is for other pages*/
+
+
+.gallery {
+    width: 100%;
+    padding-left: 5%;
+    padding-top: 25%;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+
+.column {
+    flex: 25%;
+    max-width: 22%;
+    padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+.box {
+  position: relative;
+}
+
+/*comic page*/
+.title {
+  margin-top: 10%;
+  margin-left: 25%;
+  width: 50%;
+  font-family: "enchanted_land";
+  font-size: 300%;
+  font-weight: 400;
+  font-style: normal;
+  z-index: 2;
+  text-align: center;
+
+}
+
+.blurb {
+  margin-top: 10%;
+  margin-left: 25%;
+  width: 50%;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 120%;
+  font-weight: 400;
+  font-style: normal;
+  z-index: 2;
+  text-align: center;
+  font-family: "TT_Lakes_Neue";
+}
+.mag {
+    display: block;
+    margin-left: 15%;
+    margin-right: auto;
+    width: 70%;
+    max-width: 1440px;
+    padding-top: 168px;
+    text-align: center;
+    z-index: 2;
+}
+
+.magimg {
+    display: block;
+    margin-left: 15%;
+    margin-right: auto;
+    width: 70%;
+    max-width: 1440px;
+    padding-top: 168px;
+    text-align: center;
+    z-index: 2;
+}
+
+.horseimg {
+    display: block;
+    margin-left: 5%;
+    margin-right: auto;
+    width: 90%;
+    max-width: 1440px;
+    text-align: center;
+    z-index: 2;
+}
+
+/*tablet 904x461*/
+
+/*mobile 500x667*/

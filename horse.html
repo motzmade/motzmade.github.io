@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <div class="links">
+            <a href="index.html"><h1>MotzMade</h1></a>
+            <a href="work.html">
+                <h2>Work</h2>
+            </a>
+            <a href="about.html">
+                <h2>About</h2>
+            </a>
+            <a href="contact.html">
+                <h2>Contact</h2>
+            </a>
+        </div>
+        <div class="secondary">
+            <a href="index.html"><img src="logo.png" class="logo"></a>
+            <div class="text-container">
+                <h3>Micah Spencer</h3>
+                <h4>Making Motz Made</h4>
+            </div>
+        </div>
+    </nav>
+    <div class="mag">
+        <div class="title">
+            <h3>4 Horsemen of the Apocalypse </h3>
+        </div>
+        <div class="blurb">
+            <p>There is supposedly visual silver lining on nuclear explosions. The beauty of chaos and destruction is hard to not look at or admire. These illustrative banners were created for the art of the apocalypse.</p>
+        </div>
+        <div style="z-index: 2;margin-top:10%;">
+            <img src="PosterMOCK.png" class="horseimg">
+        </div>
+    </div>
+    <script>
+        window.onload = function () {
+            const slideInElement = document.querySelector('.secondary');
+            slideInElement.classList.add('active');
+        };
+    </script>
+</body>
+
+</html>
