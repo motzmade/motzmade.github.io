@@ -8,31 +8,123 @@
 <body>
     <nav>
         <div class="links">
-            <a href="index.html"><h1>MotzMade</h1></a>
-            <a href="work.html">
+            <a href="index.html">
+                <h1>MotzMade</h1>
+            </a>
+            <a href="work.html" class="nm">
                 <h2>Work</h2>
             </a>
-            <a href="about.html">
+            <a href="about.html" class="nm">
                 <h2>About</h2>
             </a>
-            <a href="contact.html">
+            <a href="contact.html" class="nm">
                 <h2>Contact</h2>
             </a>
         </div>
-        <div class="secondary">
-            <a href="index.html"><img src="logo.png" class="logo"></a>
-            <div class="text-container">
-                <h3>Micah Spencer</h3>
-                <h4>Making Motz Made</h4>
-            </div>
-        </div>
+
     </nav>
-    
+    <img src="nav-background-01.png" class="bannerbelow">
+    <div class="abtImgWrappertwo">
+        <img class="abtimg3" src="motzsigil.png">
+    </div>
+    <div class="aboutWrapper">
+        <h3>About</h3>
+        <p>
+            I am currently a senior at Kutztown University of Pennsylvania.
+            I will be graduating this December with a Bachelor of Fine Arts
+            in Communication Design, concentrating in Graphic and
+            Illustrative Design. Throughout my academic career,
+            I have developed a deep appreciation for both conceptual
+            thinking and hand-drawn craft. I am especially passionate about
+            physical illustration and textile-based experiences. Tangible
+            processes are an essential extension of visual storytelling.
+            Working with materials, textures, and hand-drawn elements
+            allows me to create designs that feel human and intentional.
+
+
+        </p>
+        <p>
+            In addition to my academic work, I have completed freelance
+            projects for small businesses such as Timeline Arcade,
+            designing event posters, gift cards, and social media content.
+            These experiences strengthened my understanding of client
+            communication, project management, and creative problem-solving.
+            I learned how to balance multiple deadlines, adapt to feedback,
+            and translate a client’s vision into a cohesive visual outcome.
+            While I am proud of the work I’ve created independently,
+            I am eager to deepen my understanding of the professional
+            design world. I am especially excited by the opportunity to
+            collaborate with a team of like-minded creative individuals who
+            challenge one another, build on shared ideas, and elevate
+            projects beyond what one person could achieve alone.
+
+
+
+        </p>
+        <p>
+            Since beginning my studies at Kutztown,
+            I have consistently sought out challenges that push me
+            outside of my comfort zone. I have expanded my skill set
+            into UX and web design, as well as interactive coding,
+            learning how to merge digital functionality with strong
+            visual identity. I am particularly interested in bridging
+            traditional and digital practices—combining hand-drawn
+            imagery, texture, and expressive typography with interactive
+            code and web design to bring more life to the screens
+            I am motivated to create work that is distinctive, thoughtful,
+            and boundary-pushing. I believe that risk-taking is an
+            essential part of growth as a designer. Rather than defaulting
+            to what feels safe or familiar, I intentionally experiment with
+            unconventional compositions, unexpected materials, and bold
+            conceptual directions. Standing out, to me, is not about being
+            different for the sake of it, but about discovering new visual
+            languages and perspectives that feel authentic and meaningful.
+
+        </p>
+        <p>
+            I am currently exploring different opportunities
+            in the York County area as well as Maryland.
+            Please feel free to email me at micah.spencer1992@gmail.com.
+        </p>
+    </div>
+    <div class="aboutMicah nm"></div>
+    <div class="aboutmobilefooter">
+        <img src="about-footer.png">
+        <div class="aboutmobilefooterWrapper" style="margin-top: 35%;">
+            <h3>Contact</h3>
+            <p>(717)689-4102</p>
+            <p>LinkedIn</p>
+            <p>micahspencer1992@gmail.com</p>
+        </div>
+    </footer>
     <script>
-        window.onload = function () {
-            const slideInElement = document.querySelector('.secondary');
-            slideInElement.classList.add('active');
-        };
+  document.addEventListener("DOMContentLoaded", () => {
+  const frameCount = 3;
+  const loops = 5;
+
+  const aboutMicah = document.querySelector(".aboutMicah");
+  if (!aboutMicah) return;
+
+  const images = [];
+  for (let i = 1; i <= frameCount; i++) {
+    images.push(`head${i}.png`);
+  }
+
+  window.addEventListener("scroll", () => {
+    const maxScroll = document.body.scrollHeight - window.innerHeight;
+    if (maxScroll <= 0) return;
+
+    const scrollFraction = window.scrollY / maxScroll;
+    const loopedProgress = (scrollFraction * loops) % 1;
+
+    const frameIndex = Math.min(
+      frameCount - 1,
+      Math.floor(loopedProgress * frameCount)
+    );
+
+    aboutMicah.style.backgroundImage = `url('${images[frameIndex]}')`;
+  });
+});
     </script>
 </body>
 

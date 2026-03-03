@@ -8,28 +8,47 @@
 <body>
     <nav>
         <div class="links">
-            <a href="index.html"><h1>MotzMade</h1></a>
-            <a href="work.html">
+            <a href="index.html">
+                <h1>MotzMade</h1>
+            </a>
+            <a href="work.html" class="nm">
                 <h2>Work</h2>
             </a>
-            <a href="about.html">
+            <a href="about.html" class="nm">
                 <h2>About</h2>
             </a>
-            <a href="contact.html">
+            <a href="contact.html" class="nm">
                 <h2>Contact</h2>
             </a>
         </div>
-        <div class="secondary">
-            <a href="index.html"><img src="logo.png" class="logo"></a>
-            <div class="text-container">
-                <h3>Micah Spencer</h3>
-                <h4>Making Motz Made</h4>
-            </div>
-        </div>
+
     </nav>
-    <img src="test-banner.jpg" class="banner">
-    <br>
-    <section class="carousel-section">
+    <img src="nav-background-01.png" class="bannerbelow">
+    <div class="abtsection">
+        <h3>About Me</h3>
+        <p>I am motivated to create work that is distinctive, thoughtful,
+            and boundary-pushing. I believe that risk-taking is an
+            essential part of growth as a designer.
+            Rather than defaulting to what feels safe or familiar,
+            I intentionally experiment with unconventional
+            compositions, unexpected materials, and bold
+            conceptual directions. Standing out,
+            to me, is not about being different
+            for the sake of it, but about discovering
+            new visual languages and perspectives that
+            feel authentic and meaningful.
+        </p>
+    </div>
+    <div class="abtImgWrapper">
+        <img class="abtimg1" src="motzsigil.png"><span class="nm"></span>
+        </div>
+    
+    <div class="cta">
+        <h3 class="nm">Learn More About Me</h3>
+        <a href="about.html"><img src="arrow.png" class="nm"></a>
+        <a href="about.html"><button class="h3button">Learn more about me</button></a>
+    </div>
+    <section class="carousel-section nm">
         <div class="carousel">
             <figure>
                 <a href="album.html"><img src="slideshow1.jpg"></a>
@@ -57,11 +76,17 @@
             </figure>
         </div>
     </section>
+    <footer>
+        <img src="footer.png">
+        <div class="footerWrapper">
+        <h3>Contact</h3>
+        <p>(717)689-4102</p>
+        <p>LinkedIn</p>
+        <p>micahspencer1992@gmail.com</p>
+        </div>
+    </footer>
     <script>
-        window.onload = function () {
-            const slideInElement = document.querySelector('.secondary');
-            slideInElement.classList.add('active');
-        };
+
     </script>
 </body>
 
