@@ -3,6 +3,7 @@ turquoise: #2dbaa4
 dark turq: #005029
 
 */
+@media screen and (max-width: 1920px) {
 @font-face {
   font-family: "enchanted_land";
   src: url(Enchanted\ Land\ DS\ D.otf);
@@ -23,8 +24,13 @@ dark turq: #005029
   src: url(TT_Lakes_Neue_Trial_Expanded_Bold.ttf);
 }
 
+@font-face {
+  font-family: "INS";
+  src: url(INS_____.TTF);
+}
+
 body {
-    background-color: #2dbaa4;
+    background-color: #94d2b9;
 }
 
 nav {
@@ -33,9 +39,9 @@ nav {
     position: absolute;
     top: 0;
     left: 0;
-    background-color: #2dbaa4;
     color: black;
-    border-bottom: solid black 2px;
+    background-color: #89cca1;
+    z-index: 4;
 }
 
 h1 {
@@ -43,16 +49,66 @@ h1 {
     padding-right: 40%;
     text-align: left;
     color: black;
-    font-family: "KLGabe";
-    font-size: 250%;
+    font-family: "enchanted_land";
+    font-kerning: 10px;
+    font-size: 3vw;
 }
 
 h2 {
     text-align: right;
     color: white;
-    font-family: "enchanted_land";
+    font-family: "ins";
     font-kerning: 10px;
-    font-size: 200%;
+    font-size: 2.5vw;
+}
+
+h3 {
+    color: black;
+    font-family: "ins";
+    font-kerning: 10px;
+    font-size: 3vw;
+}
+
+p {
+  font-family: "TT_Lakes_Neue";
+  font-size: 1.2vw;
+}
+
+.abtsection {
+    width: 50%;
+    padding-top: 35%;
+    margin-left: 25%;
+}
+
+.abtImgWrapper {
+  position: relative;
+  width: 100%;
+  height: auto;
+  border-bottom: 30px solid #00785e;
+}
+
+.abtImgWrapper span {
+  position:absolute;
+	top: 0;
+	bottom:0;
+	left: 0;
+	right:0;
+	width: 30%;
+	height: auto;
+	z-index: 10;
+  margin-left: 50%;
+	background: url(baby_tuna.png);
+	background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.abtimg1 {
+  width: 70%;
+  height: auto;
+  margin-left: 15%;
+  margin-top: 10%;
+  z-index: 2;
 }
 
 .links {
@@ -69,26 +125,38 @@ h2 {
     position: relative;
 }
 
+.cta {
+  background-color: #89cca1;
+  position: absolute;
+  top: 125;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  display: flex;
+  padding-bottom: 2%;
+}
+
+.cta h3 {
+  padding-left: 5%;
+    text-align: left;
+    color: black;
+    font-family: "enchanted_land";
+    font-kerning: 10px;
+    font-size: 3.5vw;
+    width: 70%;
+}
+
+.cta img {
+  width: 30%;
+  height: 80%;
+  margin-top: 10px;
+  margin-right: 10%;
+  padding-left: 50%;
+}
+
 a {
     text-decoration: none;
     z-index: 100;
-}
-
-.secondary {
-    width: 25%;
-    height: 200px;
-    display: flex;
-    margin-left: 5%;
-    margin-top: 5%;
-    transform: translateX(-100%);
-    opacity: 0;
-    transition: transform 1s ease, opacity 1s ease;
-    align-items: center;
-}
-
-.secondary.active {
-    transform: translateX(0);
-    opacity: 1;
 }
 
 .text-container {
@@ -99,25 +167,27 @@ a {
     height: auto;
 }
 
-.banner {
-    width: 100%;
+.bannerbelow {
+  width: 100%;
     height: auto;
-    padding-top: 25%;
     margin: 0;
     position: absolute;
     left: 0;
+    top: 0;
+    padding-top: 7%;
+    z-index: 1;
 }
 
 :root {
   --slide-count: 8; /*no of slides (change to add more img)*/
   --slide-width: 400px; 
   --carousel-edge-pos:
-      calc( 0% - ((var(--slide-width) * var(--slide-count)) - 100%) ); /* formula to calulate the offset value */
+      calc( 0% - ((var(--slide-width) * var(--slide-count)) - 100%) ); 
 }
 
 .carousel-section {
   overflow: hidden;
-  margin-top: 50%;
+  margin-top: 15%;
 }
 
 .carousel {
@@ -150,13 +220,156 @@ a {
   }
 }
 
+footer img {
+  margin-top: 60%;
+  width: 100%;
+  z-index: -100;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+footer h3 {
+  color: black;
+    font-family: "enchanted_land";
+    font-kerning: 10px;
+    font-size: 2.5vw;
+}
+
+footer p{
+  color: black;
+    font-family: "ins";
+    font-kerning: 10px;
+    font-size: 1.5vw;
+}
+footer {
+  text-align: center;
+}
+
+.footerWrapper {
+  float: right;
+  margin-right: 25%;
+  margin-top: 20%;
+  z-index: 2;
+}
+
+.aboutmobilefooter img{
+  margin-top: 60%;
+  width: 100%;
+  z-index: -100;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.aboutmobilefooter h3 {
+  color: black;
+    font-family: "enchanted_land";
+    font-kerning: 10px;
+    font-size: 2.5vw;
+}
+
+.aboutmobilefooter p{
+  color: black;
+    font-family: "ins";
+    font-kerning: 10px;
+    font-size: 1.5vw;
+}
+.aboutmobilefooter {
+  text-align: center;
+}
+
+.aboutmobilefooterWrapper {
+  float: right;
+  margin-right: 25%;
+  margin-top: 20%;
+  z-index: 2;
+}
+
 /*end of index; everything from here on is for other pages*/
 
+.abtimg3 {
+  width: 63%;
+  height: auto;
+  margin-left: 19%;
+  margin-top: 38%;
+}
+
+.abtImgWrappertwo {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.aboutWrapper {
+  width: 45%;
+  margin-top: 10%;
+  margin-left: 40%;
+  text-align: right;
+  z-index: 100;
+}
+
+.aboutWrapper h3 {
+  color: black;
+    font-family: "ins";
+    font-kerning: 10px;
+    font-size: 3vw;
+    text-align: left;
+}
+
+.aboutWrapper p {
+  color: black;
+    font-family: "TT_Lakes_Neue";
+    font-size: 1.2vw;
+}
+
+.aboutMicah {
+  position: absolute;
+  top: 135%;
+  left: 0;
+  z-index: 5;
+  width: 30vw;
+  height: 60vw;
+  margin-left: 5%;
+  background-image: url(head1.png);
+  background-size: contain; 
+}
 
 .gallery {
     width: 100%;
     padding-left: 5%;
-    padding-top: 25%;
+    padding-top: 15%;
+}
+
+.galleryProj {
+    width: 100%;
+    padding-top: 5%;
+}
+
+.galcolumn {
+    flex: 45%;
+    max-width: 24%;
+    padding: 0 5px;
+}
+
+.galcolumn img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+.minicolumn {
+    flex: 45%;
+    max-width: 50%;
+    padding: 0 5px;
+}
+
+.minicolumn img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+}
+
 }
 
 .row {
@@ -239,6 +452,180 @@ a {
     z-index: 2;
 }
 
-/*tablet 904x461*/
+.h3button {
+  display: none;
+}
+
 
 /*mobile 500x667*/
+
+@media screen and (max-width: 667px) {
+
+  .nm {
+    display: none;
+  }
+
+  nav {
+    width: 100%;
+    height: 90px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: black;
+    background-color: #89cca1;
+    z-index: 4;
+}
+
+  h1 {
+    text-align: center;
+    padding-left: 10vw;
+    color: black;
+    font-family: "enchanted_land";
+    font-kerning: 10px;
+    font-size: 3.5vh;
+}
+
+h2 {
+    text-align: center;
+    color: white;
+    font-family: "ins";
+    font-kerning: 10px;
+    font-size: 2.5vh;
+}
+
+h3 {
+  text-align: center;
+    color: black;
+    font-family: "ins";
+    font-kerning: 10px;
+    font-size: 3vh;
+}
+
+p {
+  font-family: "TT_Lakes_Neue";
+  font-size: 1.5vh;
+  text-align: center;
+}
+
+.abtImgWrapper {
+  border-bottom: 2px solid #00785e;
+  width: 100%;
+  padding-bottom: 5%;
+}
+
+.cta {
+  background-color: #89cca1;
+  position: absolute;
+  top: 125;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  display: flex;
+  padding-bottom: 2%;
+}
+
+.cta h3 {
+  padding-left: 34vw;
+    text-align: left;
+    color: black;
+    font-family: "enchanted_land";
+    font-kerning: 10px;
+    font-size: 3.5vw;
+    width: 70%;
+    
+}
+
+.h3button {
+  display: block;
+  width: 122%;
+  height: 10vh;
+  text-align: left;
+    color: black;
+    font-family: "enchanted_land";
+    font-size: 3.5vw;
+    background-color: #fff;
+    margin-top: 20%;
+    margin-left: 100%;
+    text-align: center;
+    border: none;
+    border-radius: 20px;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  top: 5vh;
+  z-index: -1;
+   color: #fff;
+}
+
+.footerWrapper {
+  position: absolute;
+  top: 85vh;
+  left: 55vw;
+  z-index: 2;
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+}
+
+.aboutWrapper {
+  width: 50%;
+  margin-top: 10%;
+  margin-left: 25%;
+  text-align: center;
+  z-index: 1000;
+}
+
+.aboutWrapper h3 {
+  color: black;
+    font-family: "ins";
+    font-kerning: 10px;
+    font-size: 3vh;
+    text-align: center;
+}
+
+.aboutWrapper p {
+  color: black;
+    font-family: "TT_Lakes_Neue";
+    font-size: 1.5vh;
+}
+
+.aboutmobilefooter img{
+  width: 100%;
+  z-index: -100;
+  position: absolute;
+  left: 0;
+  top: 90%;
+  bottom: 0;
+}
+
+.aboutmobilefooter h3 {
+  color: black;
+    font-family: "enchanted_land";
+    font-kerning: 10px;
+    font-size: 2.5vw;
+}
+
+.aboutmobilefooter p{
+  color: black;
+    font-family: "ins";
+    font-kerning: 10px;
+    font-size: 1.5vw;
+}
+.aboutmobilefooter {
+  text-align: center;
+}
+
+.aboutmobilefooterWrapper {
+  float: right;
+  margin-right: 25%;
+  margin-top: 20%;
+  z-index: 2;
+}
+
+}
