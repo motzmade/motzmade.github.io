@@ -11,24 +11,22 @@
             <a href="index.html">
                 <h1>MotzMade</h1>
             </a>
-            <a href="work.html" class="nm">
-                <h2>Work</h2>
-            </a>
-            <a href="about.html" class="nm">
-                <h2>About</h2>
-            </a>
-            <a href="contact.html" class="nm">
-                <h2>Contact</h2>
-            </a>
+            <div class="hotlinks">
+                <a href="work.html" class="nm">
+                    <h2>Work</h2>
+                </a>
+                <a href="about.html" class="nm">
+                    <h2>About</h2>
+                </a>
+                <a href="contact.html" class="nm">
+                    <h2>Contact</h2>
+                </a>
+            </div>
         </div>
-
     </nav>
     <img src="nav-background-01.png" class="bannerbelow">
-    <div class="abtImgWrappertwo">
-        <img class="abtimg3" src="motzsigil.png">
-    </div>
+    <h3 class="aboutheader">About</h3>
     <div class="aboutWrapper">
-        <h3>About</h3>
         <p>
             I am currently a senior at Kutztown University of Pennsylvania.
             I will be graduating this December with a Bachelor of Fine Arts
@@ -88,42 +86,44 @@
         </p>
     </div>
     <div class="aboutMicah nm"></div>
-    <div class="aboutmobilefooter">
-        <img src="about-footer.png">
-        <div class="aboutmobilefooterWrapper" style="margin-top: 35%;">
-            <h3>Contact</h3>
-            <p>(717)689-4102</p>
-            <p>LinkedIn</p>
-            <p>micahspencer1992@gmail.com</p>
-        </div>
+    <footer>
+        <img src="about-footer.png" style="top: -40vh;">
     </footer>
     <script>
-  document.addEventListener("DOMContentLoaded", () => {
-  const frameCount = 3;
-  const loops = 5;
+document.addEventListener("DOMContentLoaded", () => {
 
   const aboutMicah = document.querySelector(".aboutMicah");
   if (!aboutMicah) return;
 
-  const images = [];
-  for (let i = 1; i <= frameCount; i++) {
-    images.push(`head${i}.png`);
-  }
+  const images = [
+    "head1.png",
+    "head2.png",
+    "head3.png"
+  ];
+
+  let currentFrame = 0;
+  let lastTrigger = window.scrollY;
+  const scrollStep = 100; 
 
   window.addEventListener("scroll", () => {
-    const maxScroll = document.body.scrollHeight - window.innerHeight;
-    if (maxScroll <= 0) return;
 
-    const scrollFraction = window.scrollY / maxScroll;
-    const loopedProgress = (scrollFraction * loops) % 1;
+    const scrollDifference = window.scrollY - lastTrigger;
 
-    const frameIndex = Math.min(
-      frameCount - 1,
-      Math.floor(loopedProgress * frameCount)
-    );
+    if (Math.abs(scrollDifference) > scrollStep) {
 
-    aboutMicah.style.backgroundImage = `url('${images[frameIndex]}')`;
+      if (scrollDifference > 0) {
+        currentFrame = Math.min(currentFrame + 1, images.length - 1);
+      } else {
+        currentFrame = Math.max(currentFrame - 1, 0);
+      }
+
+      aboutMicah.style.backgroundImage = `url('${images[currentFrame]}')`;
+
+      lastTrigger = window.scrollY;
+    }
+
   });
+
 });
     </script>
 </body>

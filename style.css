@@ -76,7 +76,7 @@ p {
 
 .abtsection {
     width: 50%;
-    padding-top: 35%;
+    padding-top: 45vh;
     margin-left: 25%;
 }
 
@@ -107,7 +107,6 @@ p {
   width: 70%;
   height: auto;
   margin-left: 15%;
-  margin-top: 10%;
   z-index: 2;
 }
 
@@ -128,7 +127,7 @@ p {
 .cta {
   background-color: #89cca1;
   position: absolute;
-  top: 125;
+  top: 115;
   left: 0;
   width: 100%;
   height: 150px;
@@ -142,7 +141,7 @@ p {
     color: black;
     font-family: "enchanted_land";
     font-kerning: 10px;
-    font-size: 3.5vw;
+    font-size: 3vw;
     width: 70%;
 }
 
@@ -168,15 +167,15 @@ a {
 }
 
 .bannerbelow {
-  width: 100%;
-    height: auto;
+    width: 100%;
+    height: 92vh;
     margin: 0;
     position: absolute;
     left: 0;
     top: 0;
-    padding-top: 7%;
+    padding-top: 3%;
     z-index: 1;
-}
+  }
 
 :root {
   --slide-count: 8; /*no of slides (change to add more img)*/
@@ -220,29 +219,16 @@ a {
   }
 }
 
-footer img {
-  color: white;
-  margin-top: 60%;
-  width: 100%;
-  z-index: -100;
-  position: absolute;
-  left: 0;
-  top: 0;
-}
+  footer img {
+    color: white;
+    margin-top: 80vh;
+    width: 100%;
+    z-index: -100;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
 
-footer h3 {
-  color: white;
-    font-family: "enchanted_land";
-    font-kerning: 10px;
-    font-size: 2.5vw;
-}
-
-footer p{
-  color: white;
-    font-family: "ins";
-    font-kerning: 10px;
-    font-size: 1.5vw;
-}
 footer {
   text-align: center;
 }
@@ -251,7 +237,7 @@ footer {
   color: white;
   float: right;
   margin-right: 25%;
-  margin-top: 25%;
+  margin-top: 40vh;
   z-index: 2;
 }
 
@@ -304,13 +290,23 @@ footer {
   height: auto;
 }
 
-.aboutWrapper {
-  width: 45%;
-  margin-top: 10%;
-  margin-left: 40%;
-  text-align: right;
-  z-index: 100;
-}
+  .aboutheader {
+    margin-top: 50vh;
+    z-index: 100;
+    margin-left: 25vw;
+    color: black;
+    font-family: "ins";
+    font-kerning: 10px;
+    font-size: 3vw;
+    text-align: left;
+  }
+
+  .aboutWrapper {
+    width: 40%;
+    margin-left: 35%;
+    text-align: right;
+    z-index: 100;
+  }
 
 .aboutWrapper h3 {
   color: black;
@@ -328,7 +324,7 @@ footer {
 
 .aboutMicah {
   position: absolute;
-  top: 135%;
+  top: 70vh;
   left: 0;
   z-index: 5;
   width: 30vw;
@@ -336,6 +332,14 @@ footer {
   margin-left: 5%;
   background-image: url(head1.png);
   background-size: contain; 
+}
+
+.hotlinks {
+  display: flex;
+  flex: wrap;
+  justify-content: space-around;
+  width: 70%;
+  padding-top: 2vh;
 }
 
 .gallery {
@@ -371,6 +375,17 @@ footer {
     margin-top: 8px;
     vertical-align: middle;
     width: 100%;
+}
+
+.minicolumntwo {
+  display: flex;
+    max-width: 100%;
+}
+
+.minicolumntwo img {
+    vertical-align: middle;
+    width: 100%;
+    padding: 2vh;
 }
 
 .threecolumn {
@@ -424,7 +439,7 @@ footer {
 }
 
 .blurb {
-  margin-top: 10%;
+  margin-top: 2%;
   margin-left: 25%;
   width: 50%;
   font-family: "IBM Plex Sans", sans-serif;
@@ -436,14 +451,14 @@ footer {
   font-family: "TT_Lakes_Neue";
 }
 .mag {
-    display: block;
-    margin-left: 15%;
-    margin-right: auto;
-    width: 70%;
-    max-width: 1440px;
-    padding-top: 168px;
-    text-align: center;
-    z-index: 2;
+  display: block;
+  margin-left: 15%;
+  margin-right: auto;
+  width: 70%;
+  max-width: 1440px;
+  padding-top: 70px;
+  text-align: center;
+  z-index: 2;
 }
 
 .magimg {
@@ -475,6 +490,7 @@ footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  margin-top: 40vh;
 }
 
 .contactWrapper h3 {
