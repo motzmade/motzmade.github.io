@@ -111,8 +111,7 @@ p {
 }
 
 .links {
-    padding-top: 1.5%;
-    padding-right: 10%;
+    padding-left: 5%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -350,7 +349,6 @@ footer {
 
 .galleryProj {
     width: 100%;
-    padding-top: 5%;
 }
 
 .galcolumn {
@@ -467,7 +465,7 @@ footer {
     margin-right: auto;
     width: 70%;
     max-width: 1440px;
-    padding-top: 168px;
+    padding-top: 2vh;
     text-align: center;
     z-index: 2;
 }
